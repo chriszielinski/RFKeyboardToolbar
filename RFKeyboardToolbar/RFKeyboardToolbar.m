@@ -136,7 +136,7 @@
     // make added buttons appear from the right
     [addButtons enumerateObjectsUsingBlock:^(RFToolbarButton *button, BOOL *stop) {
         button.frame = CGRectMake(originX, 0, button.frame.size.width, button.frame.size.height);
-        [_scrollView addSubview:button];
+        [self.scrollView addSubview:button];
     }];
     
     // animate
@@ -145,11 +145,11 @@
             button.alpha = 0;
         }];
         
-        [_buttons enumerateObjectsUsingBlock:^(RFToolbarButton *button, NSUInteger idx, BOOL *stop) {
+        [self.buttons enumerateObjectsUsingBlock:^(RFToolbarButton *button, NSUInteger idx, BOOL *stop) {
             button.frame = [buttonFrames[idx] CGRectValue];
         }];
         
-        _scrollView.contentSize = contentSize;
+        self.scrollView.contentSize = contentSize;
     } completion:^(BOOL finished) {
         [removeButtons makeObjectsPerformSelector:@selector(removeFromSuperview)];
     }];
