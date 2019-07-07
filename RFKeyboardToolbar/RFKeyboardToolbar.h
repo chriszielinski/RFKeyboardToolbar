@@ -13,6 +13,11 @@
 @interface RFKeyboardToolbar : UIView
 
 /**
+ *  The toolbar view.
+ */
+@property (nonatomic,strong) UIVisualEffectView *toolbarView;
+
+/**
  *  The buttons of the toolbar.
  */
 @property (nonatomic, strong) NSArray *buttons;

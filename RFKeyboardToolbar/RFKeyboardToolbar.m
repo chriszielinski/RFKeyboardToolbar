@@ -10,10 +10,6 @@
 @interface RFKeyboardToolbar ()
 
 /**
- *  The toolbar view.
- */
-@property (nonatomic,strong) UIView *toolbarView;
-/**
  *  The scroll view that's faked to look like a toolbar.
  */
 @property (nonatomic,strong) UIScrollView *scrollView;
@@ -53,8 +49,8 @@
 }
 
 - (UIView *)inputAccessoryView {
-    _toolbarView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, 40)];
-    _toolbarView.backgroundColor = [UIColor colorWithWhite:0.973 alpha:1.0];
+    _toolbarView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]];
+    _toolbarView.frame = CGRectMake(0, 0, self.bounds.size.width, 40);
     _toolbarView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     
     _topBorder = [CALayer layer];
@@ -62,7 +58,7 @@
     _topBorder.backgroundColor = [UIColor colorWithWhite:0.678 alpha:1.0].CGColor;
     
     [_toolbarView.layer addSublayer:_topBorder];
-    [_toolbarView addSubview:[self fakeToolbar]];
+    [_toolbarView.contentView addSubview:[self fakeToolbar]];
     
     return _toolbarView;
 }
