@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		144B338D22D178C600A50F76 /* RFKeyboardToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 144B338B22D178C600A50F76 /* RFKeyboardToolbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		144B339622D1790600A50F76 /* RFKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 144B339322D1790600A50F76 /* RFKeyboardToolbar.m */; };
-		144B339722D1790600A50F76 /* RFToolbarButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 144B339422D1790600A50F76 /* RFToolbarButton.h */; };
+		144B339722D1790600A50F76 /* RFToolbarButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 144B339422D1790600A50F76 /* RFToolbarButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		144B339822D1790600A50F76 /* RFToolbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 144B339522D1790600A50F76 /* RFToolbarButton.m */; };
 /* End PBXBuildFile section */
 
